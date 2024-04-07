@@ -17,8 +17,7 @@ const Navbar = () => {
   return (
     <div className="grid grid-cols-12 gap-4 place-content-center">
       {/* Search */}
-      <label className="input flex items-center bg-secondary rounded-full col-span-5">
-        <input type="text" className="w-full grow" placeholder="Search" />
+      <label className="input flex items-center gap-2 bg-secondary rounded-full col-span-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
@@ -31,6 +30,7 @@ const Navbar = () => {
             clipRule="evenodd"
           />
         </svg>
+        <input type="text" className="w-full grow" placeholder="Search...." />
       </label>
       <div className="col-span-7 ms-auto flex justify-center items-center gap-2 lg:gap-4">
         {/* light/dark mode */}

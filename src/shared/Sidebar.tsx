@@ -22,7 +22,7 @@ const Sidebar = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="w-1/2 sm:w-1/3 lg:w-64 min-h-full bg-white lg:bg-transparent">
+        <div className="w-1/2 sm:w-1/3 lg:w-full min-h-full bg-white lg:bg-transparent">
           <SidebarMenu />
           <AllScreens />
         </div>

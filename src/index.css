@@ -10,3 +10,11 @@
 .screens-btn {
     @apply bg-transparent border border-secondary px-4 py-2 flex justify-center items-center gap-2 rounded-3xl text-sm hover:bg-primary hover:text-white transition-all duration-300;
 }
+
+.active-link {
+    @apply text-sm bg-secondary text-TPrimary flex gap-2 px-4 py-1
+}
+
+.default-link {
+    @apply text-sm text-TSecondary flex gap-2 px-4 py-1
+}
