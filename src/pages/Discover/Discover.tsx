@@ -1,4 +1,5 @@
 import Articles from "./Articles";
+import Screens from "./Screens";
 import Templates from "./Templates";
 
 const Discover = () => {
@@ -16,6 +17,7 @@ const Discover = () => {
       </div>
       <Templates />
       <Articles />
+      <Screens />
     </section>
   );
 };

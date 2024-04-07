@@ -19,7 +19,6 @@ const Articles = () => {
         setArticles(data);
       });
   }, []);
-  console.log(articles);
   return (
     <div className="mt-10">
       <div className="flex justify-between items-center">
