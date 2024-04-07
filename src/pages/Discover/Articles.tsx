@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ArticleCard from "../../components/ArticleCard";
 import { Link } from "react-router-dom";
+import ArticleSkeleton from "../../components/skeleton/ArticleSkeleton";
 
 type TArticle = {
   id: string;
@@ -27,6 +28,7 @@ const Articles = () => {
           See all
         </Link>
       </div>
+      {articles.length === 0 && <ArticleSkeleton />}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center sm:place-items-start">
         {articles.map((article) => (
           <ArticleCard key={article.id} article={article} />

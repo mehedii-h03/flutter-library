@@ -1,21 +1,21 @@
 [
   {
     "id": 1,
-    "image": "https://i.ibb.co/pPVC5p8/image.png",
+    "image": "https://i.ibb.co/0s5XbQJ/article1.png",
     "date": "Mar 24, 2024",
     "category": "Animation",
     "title": "Learn Flutter animation"
   },
   {
     "id": 2,
-    "image": "https://i.ibb.co/Sn9FwJw/image-2.png",
+    "image": "https://i.ibb.co/G7d2XCQ/article2.jpg",
     "date": "Mar 24, 2024",
     "category": "Animation",
     "title": "Onboarding Screen with Carousel & Animated Dots"
   },
   {
     "id": 3,
-    "image": "https://i.ibb.co/3NPT0gd/image-1.png",
+    "image": "https://i.ibb.co/b6KRnJW/article3.jpg",
     "date": "Mar 24, 2024",
     "category": "Animation",
     "title": "Parallax Scroll Effect with PageView in Flutter"

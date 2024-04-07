@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TemplateCard from "../../components/TemplateCard";
 import { Link } from "react-router-dom";
+import TemplateSkeleton from "../../components/skeleton/TemplateSkeleton";
 
 type TTemplate = {
   id: string;
@@ -27,8 +28,9 @@ const Templates = () => {
           See all
         </Link>
       </div>
+      {templates.length === 0 && <TemplateSkeleton />}
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {templates.map((template) => (
           <TemplateCard key={template.id} template={template} />
         ))}
