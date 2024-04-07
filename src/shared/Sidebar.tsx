@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Sidebar = () => {
   return (
-    <aside className="drawer lg:drawer-open lg:block lg:border-r border-secondary ">
+    <aside className="drawer lg:drawer-open lg:block lg:border-r border-secondary z-10 h-full">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col items-center justify-center my-2">
         <label
@@ -22,7 +22,7 @@ const Sidebar = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="w-1/2 sm:w-1/3 lg:min-w-full min-h-full bg-white lg:bg-transparent">
+        <div className="w-1/2 sm:w-1/3 lg:w-64 min-h-full bg-white lg:bg-transparent">
           <SidebarMenu />
           <AllScreens />
         </div>

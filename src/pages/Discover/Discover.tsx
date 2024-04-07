@@ -1,8 +1,22 @@
+import Articles from "./Articles";
+import Templates from "./Templates";
+
 const Discover = () => {
   return (
-    <div>
-      <h1>Welcome to the Discover page</h1>
-    </div>
+    <section>
+      <div className="text-center space-y-2 mb-10">
+        <h1 className="text-4xl leading-tight max-w-[20ch] mx-auto">
+          Build your next App even faster!
+        </h1>
+        <p className="text-TSecondary mx-auto max-w-[70ch]">
+          Beautifully designed, expertly crafted Flutter components and
+          templates, to jumpstart your projects and speed up your development
+          process.
+        </p>
+      </div>
+      <Templates />
+      <Articles />
+    </section>
   );
 };
 

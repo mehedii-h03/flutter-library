@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Foodly Restaurant App Template",
+    "image": "https://i.ibb.co/0XxNWPc/food.png",
+    "downloads": 546,
+    "views": 28
+  },
+  {
+    "id": 2,
+    "title": "Flutter Animation Template",
+    "image": "https://i.ibb.co/8Y00H6L/animation1.png",
+    "downloads": 546,
+    "views": 28
+  },
+  {
+    "id": 3,
+    "title": "Flutter Animation Template",
+    "image": "https://i.ibb.co/x8d1Fg9/animation2.png",
+    "downloads": 546,
+    "views": 28
+  },
+  {
+    "id": 4,
+    "title": "Flutter Animation Template",
+    "image": "https://i.ibb.co/0FJ1k9X/animation3.png",
+    "downloads": 546,
+    "views": 28
+  },
+  {
+    "id": 5,
+    "title": "Flutter Animation Template",
+    "image": "https://i.ibb.co/BVSWkg6/animation4.png",
+    "downloads": 546,
+    "views": 28
+  },
+  {
+    "id": 6,
+    "title": "Flutter Animation Template",
+    "image": "https://i.ibb.co/kHBZt84/animation5.png",
+    "downloads": 546,
+    "views": 28
+  }
+]

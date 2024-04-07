@@ -5,7 +5,7 @@ import kit from "../assets/icons/kit.svg";
 
 const SidebarMenu = () => {
   return (
-    <ul className="py-4 text-sm">
+    <ul className="pb-4 text-sm">
       <li className="w-40 px-4 py-2">
         <img src={logo} alt="logo" />
       </li>
