@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+// TODO: Active link, Mores link have to add
+
 const AllScreens = () => {
   return (
     <div>
