@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import filter from "../../assets/icons/filter.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ScreensCard from "../../components/ScreensCard";
+import { useAnimation, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 type TScreen = {
   id: number;
@@ -19,6 +21,40 @@ const Screens = () => {
         setScreens(data);
       });
   }, []);
+
+  // Animation part
+  const cardParent = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 },
+    },
+  };
+  const cardChild = {
+    hidden: {
+      y: -20,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.4 },
+    },
+  };
+
+  const ref = useRef(null);
+  const inView = useInView(ref);
+  const animateControl = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animateControl.start("visible");
+    } else {
+      animateControl.start("hidden");
+    }
+  }, [inView, animateControl]);
 
   return (
     <div className="mt-10">
@@ -53,11 +89,19 @@ const Screens = () => {
           </button>
         </div>
       </div>
-      <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <motion.div
+        ref={ref}
+        variants={cardParent}
+        initial="hidden"
+        animate={animateControl}
+        className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+      >
         {screens.map((screen) => (
-          <ScreensCard key={screen.id} screen={screen} />
+          <motion.div variants={cardChild}>
+            <ScreensCard key={screen.id} screen={screen} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

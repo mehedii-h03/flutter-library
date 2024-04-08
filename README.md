@@ -1,6 +1,6 @@
 # Flutter Library
 
-Welcome to the Flutter Library repository! This website represent a event management web application.
+Welcome to the Flutter Library repository! This website represent a library of flutter web application.
 
 ## Live link
 
