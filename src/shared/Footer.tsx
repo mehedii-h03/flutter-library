@@ -8,7 +8,7 @@ import { IoLogoFacebook } from "react-icons/io";
 const Footer = () => {
   return (
     <footer>
-      <div className="flex flex-col md:flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between px-3 lg:px-4">
         <div className="space-y-4 text-center md:text-start">
           <img className="w-32 mx-auto md:mx-0" src={logo} alt="logo" />
           <p className="text-TSecondary mx-auto md:mx-0 max-w-[70ch]">

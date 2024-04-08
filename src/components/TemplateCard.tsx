@@ -12,13 +12,13 @@ const TemplateCard = ({ template }: { template: TTemplate }) => {
   const { image, title, views, downloads } = template;
   return (
     // TODO: have to wrap with Link
-    <div className="card w-80 rounded-lg">
+    <div className="card max-w-80 rounded-lg">
       <figure>
         <img src={image} />
       </figure>
       {/* Description */}
       <div className="pt-2 p-0 flex justify-between items-center">
-        <h2 className="font-semibold">{title}</h2>
+        <h2 className="font-semibold text-sm md:text-base">{title}</h2>
         <div className="flex justify-between items-center gap-2">
           <div className="flex justify-between items-center gap-1">
             <img className="w-3" src={kit} />

@@ -4,7 +4,7 @@ import Templates from "./Templates";
 
 const Discover = () => {
   return (
-    <section>
+    <section className="px-2 lg:px-4">
       <div className="text-center space-y-2 mb-10">
         <h1 className="text-4xl leading-tight max-w-[20ch] mx-auto">
           Build your next App even faster!

@@ -10,7 +10,7 @@ const ArticleCard = ({ article }: { article: TArticle }) => {
   const { image, date, category, title } = article;
   return (
     // TODO: have to wrap with Link
-    <div className="card w-80 rounded-lg">
+    <div className="card max-w-80 rounded-lg">
       <figure>
         <img src={image} />
       </figure>

@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Flutter Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Flutter Library repository! This website represent a event management web application.
 
-Currently, two official plugins are available:
+## Live link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[https://beamish-mousse-a03ba5.netlify.app/](https://beamish-mousse-a03ba5.netlify.app/)
 
-## Expanding the ESLint configuration
+## Tech Stacks
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React: The frontend framework rendering the dynamic and user-friendly interface.
+- React Router: A library for adding navigation and routing to React applications.
+- TypeScript: A superset of JavaScript that adds static typing to the language.
+- Tailwind: A utility-first CSS framework for rapid UI development.
+- Daisy UI: Tailwind CSS extension with additional components and styles.
+- Framer Motion: A motion library for React, enabling smooth animations and transitions.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To get started with Flutter Library:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone this repository: `git clone https://github.com/mehedii-h03/flutter-library`
+
+2. Navigate to the project directory: `cd flutter-library`
+
+3. Install dependencies: `npm install`
+
+4. Run the application: `npm run dev`
+
+Open your browser and access the website at [http://localhost:5173/](http://localhost:5173/).
+
+## Feel free to explore the Flutter Library.
+
+I hope you enjoy using the Flutter Library web application. If you have any questions or feedback, please don't hesitate to reach out.

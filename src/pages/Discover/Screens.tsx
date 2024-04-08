@@ -23,7 +23,7 @@ const Screens = () => {
   return (
     <div className="mt-10">
       <div className="flex justify-between items-center">
-        <h3 className="text-2xl mb-4">Articles</h3>
+        <h3 className="text-2xl mb-4">Screens</h3>
         <Link to="" className="text-xs text-TSecondary">
           See all
         </Link>
