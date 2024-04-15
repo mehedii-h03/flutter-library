@@ -8,7 +8,7 @@ import { IoLogoFacebook } from "react-icons/io";
 const Footer = () => {
   return (
     <footer>
-      <div className="flex flex-col md:flex-row justify-between px-3 lg:px-4">
+      <div className="flex flex-col md:flex-row justify-between px-3 lg:px-6">
         <div className="space-y-4 text-center md:text-start">
           <img className="w-32 mx-auto md:mx-0" src={logo} alt="logo" />
           <p className="text-TSecondary mx-auto md:mx-0 max-w-[70ch]">
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="my-6" />
-      <div className="mt-6 flex text-center md:text-start flex-col md:flex-row space-y-4 md:space-y-0 justify-between text-sm text-TSecondary">
+      <div className="mt-6 flex text-center md:text-start flex-col md:flex-row space-y-4 md:space-y-0 justify-between text-sm text-TSecondary lg:px-6">
         <p>Copyright 2024 TheFlutterLibrary. All rights reserved.</p>
         <p>Privacy Policy | Terms & Conditions | Cookie Policy</p>
       </div>

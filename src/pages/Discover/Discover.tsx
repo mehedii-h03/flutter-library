@@ -11,12 +11,11 @@ const Discover = () => {
     opacity: 1,
     transition: {
       duration: 1.5,
-      staggerChildren: 0.6,
       delay: 0.5,
     },
   };
   return (
-    <section className="px-2 lg:px-4">
+    <section className="px-2 lg:px-6">
       <motion.div
         initial={initial}
         animate={ultimate}
@@ -31,6 +30,7 @@ const Discover = () => {
           process.
         </motion.p>
       </motion.div>
+      {/* Contents */}
       <Templates />
       <Articles />
       <Screens />

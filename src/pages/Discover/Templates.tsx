@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import TemplateCard from "../../components/TemplateCard";
 import { Link } from "react-router-dom";
 import TemplateSkeleton from "../../components/skeleton/TemplateSkeleton";
-import { useAnimation, useInView } from "framer-motion";
 import { motion } from "framer-motion";
+import StaggerAnimation from "../../components/StaggerAnimation";
+import { cardChild } from "../../utility/CardChild";
 
 type TTemplate = {
   id: string;
@@ -23,63 +24,37 @@ const Templates = () => {
       });
   }, []);
 
-  // Animation part
-  const cardParent = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
+  const initial = { opacity: 0 };
+  const ultimate = {
+    opacity: 1,
+    transition: { duration: 1, delay: 0.5 },
   };
-  const cardChild = {
-    hidden: {
-      y: -20,
-      opacity: 0,
-    },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.4 },
-    },
-  };
-
-  const ref = useRef(null);
-  const inView = useInView(ref);
-  const animateControl = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      animateControl.start("visible");
-    } else {
-      animateControl.start("hidden");
-    }
-  }, [inView, animateControl]);
 
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <motion.div
+        initial={initial}
+        animate={ultimate}
+        className="flex justify-between items-center"
+      >
         <h3 className="text-2xl mb-4">Templates</h3>
-        <Link to="" className="text-xs text-TSecondary">
+        <Link to="" className="text-sm text-TSecondary">
           See all
         </Link>
-      </div>
+      </motion.div>
       {templates.length === 0 && <TemplateSkeleton />}
       {/* Cards */}
-      <motion.div
-        ref={ref}
-        variants={cardParent}
-        initial="hidden"
-        animate={animateControl}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center sm:place-items-start"
+      <StaggerAnimation
+        classes={
+          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center sm:place-items-start"
+        }
       >
         {templates.map((template) => (
           <motion.div variants={cardChild}>
             <TemplateCard key={template.id} template={template} />
           </motion.div>
         ))}
-      </motion.div>
+      </StaggerAnimation>
     </div>
   );
 };
