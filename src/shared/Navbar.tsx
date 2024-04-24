@@ -1,7 +1,23 @@
 import { useEffect, useState } from "react";
 import ThemeToggle from "../components/ThemeToggle";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+  //Animation
+  const initial = {
+    opacity: 0,
+    y: -20,
+  };
+  const ultimate = {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      delay: 0.5,
+    },
+  };
+
+  //Theme
   const initialTheme = localStorage.getItem("theme") || "light";
   const [theme, setTheme] = useState<string>(initialTheme);
 
@@ -14,8 +30,13 @@ const Navbar = () => {
   const handleToggle = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "sunset" : "light"));
   };
+
   return (
-    <div className="grid grid-cols-12 gap-2 sm:gap-4 place-content-center p-2 md:p-3 lg:p-4">
+    <motion.div
+      initial={initial}
+      animate={ultimate}
+      className="grid grid-cols-12 gap-2 sm:gap-4 place-content-center p-2 md:p-3 lg:p-4"
+    >
       {/* Search */}
       <label className="input flex items-center gap-2 bg-secondary rounded-full col-span-5">
         <svg
@@ -43,7 +64,7 @@ const Navbar = () => {
           Get Pro
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
