@@ -1,32 +1,19 @@
-const ArticleSkeleton = () => {
+const TemplateSkeleton = () => {
+  const skeleton = <div className="space-y-2 w-full">
+    <div className="skeleton h-72 w-full rounded-lg"></div>
+    <div className="flex gap-1 w-1/5">
+      <div className="skeleton h-4 w-1/2 rounded-lg"></div>
+      <div className="skeleton h-4 w-1/2 rounded-lg"></div>
+    </div>
+    <div className="skeleton h-4 w-11/12 rounded-lg"></div>
+  </div>
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center sm:place-items-start">
-      <div className="space-y-2">
-        <div className="skeleton h-48 w-full rounded-lg"></div>
-        <div className="flex gap-2 mb-2">
-          <div className="skeleton h-4 w-14 rounded-lg"></div>
-          <div className="skeleton h-4 w-14 rounded-lg"></div>
-        </div>
-        <div className="skeleton h-4 w-3/4 rounded-lg"></div>
-      </div>
-      <div className="space-y-2">
-        <div className="skeleton h-48 w-full rounded-lg"></div>
-        <div className="flex gap-2 mb-2">
-          <div className="skeleton h-4 w-14 rounded-lg"></div>
-          <div className="skeleton h-4 w-14 rounded-lg"></div>
-        </div>
-        <div className="skeleton h-4 w-3/4 rounded-lg"></div>
-      </div>
-      <div className="space-y-2">
-        <div className="skeleton h-48 w-full rounded-lg"></div>
-        <div className="flex gap-2 mb-2">
-          <div className="skeleton h-4 w-14 rounded-lg"></div>
-          <div className="skeleton h-4 w-14 rounded-lg"></div>
-        </div>
-        <div className="skeleton h-4 w-3/4 rounded-lg"></div>
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      {skeleton}
+      {skeleton}
+      {skeleton}
     </div>
   );
 };
 
-export default ArticleSkeleton;
+export default TemplateSkeleton;

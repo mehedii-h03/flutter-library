@@ -22,19 +22,19 @@ const TemplateCard = ({ template }: { template: TTemplate }) => {
     <div className="card rounded-lg">
       {/* skeleton */}
       {!isImageLoaded && (
-        <div className="space-y-2">
-          <div className="skeleton h-48 w-full rounded-lg"></div>
-          <div className="flex justify-between">
-            <div className="skeleton h-4 w-48 rounded-lg"></div>
-            <div className="flex gap-2">
-              <div className="skeleton h-4 w-10 rounded-lg"></div>
-              <div className="skeleton h-4 w-10 rounded-lg"></div>
+        <div className="space-y-2 w-full">
+          <div className="skeleton h-72 w-full rounded-lg"></div>
+          <div className="flex justify-between gap-3">
+            <div className="skeleton h-4 w-4/5 rounded-lg"></div>
+            <div className="flex gap-1 w-1/5">
+              <div className="skeleton h-4 w-1/2 rounded-lg"></div>
+              <div className="skeleton h-4 w-1/2 rounded-lg"></div>
             </div>
           </div>
         </div>
       )}
       {/* card */}
-      <div className={isImageLoaded ? "block" : "hidden"}>
+      <div className={isImageLoaded ? "block card rounded-lg" : "hidden"}>
         <figure>
           <img src={image} onLoad={handleImageLoad} alt={title} />
         </figure>

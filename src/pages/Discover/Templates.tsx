@@ -31,31 +31,30 @@ const Templates = () => {
   };
 
   return (
-    <div>
-      <motion.div
-        initial={initial}
-        animate={ultimate}
-        className="flex justify-between items-center"
-      >
+    <motion.div
+      initial={initial}
+      animate={ultimate}
+    >
+      <div className="flex justify-between items-center">
         <h3 className="text-2xl mb-4">Templates</h3>
         <Link to="" className="text-sm text-TSecondary">
           See all
         </Link>
-      </motion.div>
+      </div>
       {templates.length === 0 && <TemplateSkeleton />}
       {/* Cards */}
       <StaggerAnimation
         classes={
-          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 place-items-center sm:place-items-start"
+          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5"
         }
       >
         {templates.map((template) => (
-          <motion.div variants={cardChild}>
+          <motion.div variants={cardChild} >
             <TemplateCard key={template.id} template={template} />
           </motion.div>
         ))}
       </StaggerAnimation>
-    </div>
+    </motion.div>
   );
 };
 

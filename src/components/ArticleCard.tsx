@@ -20,15 +20,13 @@ const ArticleCard = ({ article }: { article: TArticle }) => {
     <div className="card rounded-lg">
       {/* skeleton */}
       {!isImageLoaded && (
-        <div className="space-y-2">
-          <div className="skeleton h-48 w-full rounded-lg"></div>
-          <div className="flex justify-between">
-            <div className="skeleton h-4 w-48 rounded-lg"></div>
-            <div className="flex gap-2">
-              <div className="skeleton h-4 w-10 rounded-lg"></div>
-              <div className="skeleton h-4 w-10 rounded-lg"></div>
-            </div>
+        <div className="space-y-2 w-full">
+          <div className="skeleton h-72 w-full rounded-lg"></div>
+          <div className="flex gap-1 w-1/5">
+            <div className="skeleton h-4 w-1/2 rounded-lg"></div>
+            <div className="skeleton h-4 w-1/2 rounded-lg"></div>
           </div>
+          <div className="skeleton h-4 w-11/12 rounded-lg"></div>
         </div>
       )}
       {/* card */}
